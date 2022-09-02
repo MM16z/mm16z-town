@@ -1,0 +1,21 @@
+//Color palette
+
+$color-1: #7e80ff;
+$color-2: #ebc6ff;
+$color-3: #fbeeff;
+$color-4: #b1ffff;
+
+.nav-text-style {
+    position: absolute;
+    font-family: "Silkscreen", cursive;
+    cursor: pointer;
+    font-size: 2vw;
+    letter-spacing: -0.3vw;
+    color: rgb(248, 253, 252);
+    text-shadow: -2px -2px 0 black, -2px -1px 0 black, -2px 0px 0 black, -2px 1px 0 black, -2px 2px 0 black,
+        -1px -2px 0 black, -1px -1px 0 black, -1px 0px 0 black, -1px 1px 0 black, -1px 2px 0 black, 0px -2px 0 black,
+        0px -1px 0 black, 0px 0px 0 black, 0px 1px 0 black, 0px 2px 0 black, 1px -2px 0 black, 1px -1px 0 black,
+        1px 0px 0 black, 1px 1px 0 black, 1px 2px 0 black, 2px -2px 0 black, 2px -1px 0 black, 2px 0px 0 black,
+        2px 1px 0 black, 2px 2px 0 black;
+    transition: 0.5s;
+}

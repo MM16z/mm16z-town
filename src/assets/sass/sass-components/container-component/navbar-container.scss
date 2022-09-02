@@ -1,0 +1,240 @@
+@import "../../variable/variable";
+
+.nav-container {
+    z-index: 10;
+    position: absolute;
+    background: rgb(235, 198, 255);
+    background: linear-gradient(
+        0deg,
+        rgba(235, 198, 255, 0) 0%,
+        rgba(235, 198, 255, 0.5634628851540616) 34%,
+        rgba(195, 172, 255, 0.8491771708683473) 65%,
+        rgba(126, 128, 255, 1) 100%
+    );
+    width: 70%;
+    height: 6.375vw;
+    margin-left: 15%;
+    opacity: 0.95;
+    border-bottom-left-radius: 47.75px;
+    border-bottom-right-radius: 47.75px;
+    &_login {
+        @extend .nav-container;
+        background: rgb(41, 255, 177);
+        background: linear-gradient(180deg, rgba(41, 255, 177, 1) 0%, rgba(41, 255, 177, 0) 100%);
+    }
+    &_register {
+        @extend .nav-container;
+        background: rgb(255, 207, 226);
+        background: linear-gradient(180deg, rgba(255, 207, 226, 1) 0%, rgba(255, 207, 226, 0) 100%);
+    }
+    &_user-panel {
+        @extend .nav-container;
+        background: rgb(252, 60, 255);
+        background: linear-gradient(180deg, rgba(252, 60, 255, 1) 0%, rgba(252, 60, 255, 0) 100%);
+    }
+}
+
+.nav-texts {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 82.75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#homebtn {
+    z-index: 11;
+    position: absolute;
+    cursor: pointer;
+    width: 2.5vw;
+    height: 2.5vw;
+    top: 1.6vw;
+    left: 1.5vw;
+    transition: 0.5s;
+    &:hover {
+        width: 3.2vw;
+        height: 3.2vw;
+        top: 1.25vw;
+        left: 1.1vw;
+    }
+}
+#nav-text-id1 {
+    position: absolute;
+    font-family: "Silkscreen", cursive;
+    font-size: 4vw;
+    top: 0vw;
+    letter-spacing: -0.3vw;
+    left: 5vw;
+    background: #00c4eb;
+    background: linear-gradient(to bottom, #00c4eb 0%, #bb00ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#nav-text-id2 {
+    color: white;
+    position: absolute;
+    font-family: "Silkscreen", cursive;
+    font-size: 2vw;
+    top: 0.5vw;
+    letter-spacing: -0.3vw;
+    left: 18.75vw;
+    margin-top: 1.5vw;
+}
+.nav-text-id3 {
+    @extend .nav-text-style;
+    font-size: 2vw;
+    top: 0vw;
+    left: 53vw;
+    margin-bottom: 1.75vw;
+
+    &:hover {
+        padding-right: 2vw;
+        left: 52vw;
+        padding-top: 1.75vw;
+    }
+    &_user-panel {
+        display: none;
+    }
+}
+.nav-text-id4 {
+    @extend .nav-text-style;
+    font-size: 2vw;
+    top: 0vw;
+    left: 59vw;
+    margin-top: 0.75vw;
+    &:hover {
+        padding-left: 1.5vw;
+    }
+    &_user-panel {
+        display: none;
+    }
+}
+.nav-text-id5 {
+    // color: rgb(0, 0, 0);
+    background: linear-gradient(
+        124deg,
+        #ff2400,
+        #e81d1d,
+        #e8b71d,
+        #e3e81d,
+        #1de840,
+        #1ddde8,
+        #2b1de8,
+        #dd00f3,
+        #dd00f3
+    );
+    background-size: 1800% 1800%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    font-family: "Silkscreen", cursive;
+    font-size: 1.6vw;
+    top: 0vw;
+    margin-top: 0.575vw;
+    letter-spacing: -0.3vw;
+    left: 24.75vw;
+    animation: rainbow 18s ease infinite;
+    -webkit-animation: rainbow 18s ease infinite;
+    -z-animation: rainbow 18s ease infinite;
+    -o-animation: rainbow 18s ease infinite;
+    inline-size: 25vw;
+    line-height: 2vw;
+    word-wrap: none;
+    cursor: pointer;
+    text-align: center;
+    &_login-page {
+        @extend .nav-text-id5;
+        font-size: 2.5vw;
+        left: 22.75vw;
+        margin-top: 1.6vw;
+    }
+    &_register-page {
+        @extend .nav-text-id5;
+        font-size: 2.5vw;
+        left: 22.75vw;
+        margin-top: 1.6vw;
+    }
+    &_user-panel-page {
+        @extend .nav-text-id5;
+        font-size: 2.5vw;
+        left: 30.75vw;
+        margin-top: 1vw;
+    }
+}
+
+#logoutbtn {
+    overflow: hidden;
+    transition: 0.3s;
+    position: absolute;
+    left: 58vw;
+    top: 0.85vw;
+    width: 8vw;
+    height: 4vw;
+    margin-left: 2vw;
+    background: red;
+    cursor: pointer;
+
+    &:hover {
+        background-color: black;
+        text-align: start;
+        margin-left: 21vw;
+    }
+    &::after {
+        font-size: 1vw;
+        font-weight: bold;
+        content: "LOGOUT =>";
+    }
+    &:hover::after {
+        color: red;
+        content: "don't leave! boss :(";
+    }
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82%;
+    }
+    50% {
+        background-position: 100% 19%;
+    }
+    100% {
+        background-position: 0% 82%;
+    }
+}

@@ -1,0 +1,109 @@
+.text-box-container {
+    display: block;
+    font-family: "Silkscreen", cursive;
+}
+.text-box-border {
+    width: 23vw;
+    height: 13vw;
+    // border-radius: 20px;
+    border-top-left-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+    padding: 0.5vw;
+    background: linear-gradient(45deg, rgba(255, 42, 0, 1) 0%, rgba(158, 0, 255, 1) 50%, rgba(0, 219, 255, 1) 100%);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    &_user-panel-page {
+        @extend .text-box-border;
+        width: 30vw;
+        height: 20vw;
+        margin-top: 3vw;
+    }
+}
+
+#text-box-from {
+    position: absolute;
+    font-size: 1.5vw;
+    margin-left: 4vw;
+    margin-top: 0.875vw;
+    &_user-panel-page {
+        @extend #text-box-from;
+        margin-top: 4.2vw;
+    }
+}
+#text-box-message {
+    position: absolute;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1vw;
+    font-weight: 600;
+    margin-left: 3vw;
+    margin-top: 3vw;
+    inline-size: 19vw;
+    max-height: 8vw;
+    overflow-y: scroll;
+    word-wrap: break-word;
+    &_user-panel-page {
+        @extend #text-box-message;
+        margin-top: 7vw;
+        inline-size: 26vw;
+        max-height: 13vw;
+    }
+}
+#text-box-date {
+    position: absolute;
+    font-size: 1.2vw;
+    margin-left: 2vw;
+    margin-top: 11.25vw;
+    line-height: 0.9vw;
+    &_user-panel-page {
+        @extend #text-box-date;
+        margin-top: 20.75vw;
+    }
+}
+
+#post-edit-btn {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgb(73, 255, 33);
+    width: 4vw;
+    height: 2vw;
+    margin-left: 25.575vw;
+    margin-top: 4.175vw;
+    font-size: 0.75vw;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    &:hover {
+        background-color: rgb(169, 246, 53);
+    }
+    &_null {
+        display: none;
+        pointer-events: none;
+    }
+    
+}
+
+#post-delete-btn {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgb(255, 13, 13);
+    width: 4vw;
+    height: 2vw;
+    margin-left: 20.575vw;
+    margin-top: -3.175vw;
+    font-size: 0.75vw;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    &:hover {
+        background-color: rgb(255, 73, 49);
+    }
+    &_null {
+        display: none;
+        pointer-events: none;
+    }
+    
+}
+

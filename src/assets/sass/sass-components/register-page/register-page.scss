@@ -1,0 +1,35 @@
+@import "../login-page/login-page.scss";
+
+.register-inputcontainer {
+    @extend .login-inputcontainer;
+    transform: translate(-70%, -50%);
+
+    & > input.inputborder {
+        width: 40vw;
+    }
+    & > label {
+        text-align: inherit;
+    }
+    & > input#username-input {
+        position: absolute;
+        width: 30vw;
+        margin-top: 9vw;
+        margin-left: 80vw;
+    }
+    & > input#register-submitbtn {
+        @extend #login-submitbtn;
+        transform: translate(20%, 0%);
+        color: red;
+        background-color: black;
+        &:hover {
+            background-color: whitesmoke;
+        }
+    }
+    & > label#username-input-label {
+        position: absolute;
+        text-align: center;
+        margin-top: 3.5vw;
+        margin-left: 80vw;
+        inline-size: 15vw;
+    }
+}

@@ -28,7 +28,7 @@ function RegisterPage() {
             localStorage.clear();
             window.location = "/";
           } else {
-            navigate("/user/panel");
+            window.location = "/user/panel";
           }
         })
       );

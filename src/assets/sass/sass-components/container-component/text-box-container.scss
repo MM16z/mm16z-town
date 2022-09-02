@@ -25,9 +25,13 @@
 
 #text-box-from {
     position: absolute;
-    font-size: 1.5vw;
+    font-size: 1.1vw;
     margin-left: 4vw;
-    margin-top: 0.875vw;
+    margin-top: 0.675vw;
+    inline-size: 18.5vw;
+    word-wrap: none;
+    white-space: nowrap;
+    overflow: hidden;
     &_user-panel-page {
         @extend #text-box-from;
         margin-top: 4.2vw;
@@ -55,7 +59,7 @@
     position: absolute;
     font-size: 1.2vw;
     margin-left: 2vw;
-    margin-top: 11.25vw;
+    margin-top: 11.75vw;
     line-height: 0.9vw;
     &_user-panel-page {
         @extend #text-box-date;
@@ -82,7 +86,6 @@
         display: none;
         pointer-events: none;
     }
-    
 }
 
 #post-delete-btn {
@@ -104,6 +107,4 @@
         display: none;
         pointer-events: none;
     }
-    
 }
-

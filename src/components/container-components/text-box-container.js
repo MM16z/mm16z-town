@@ -5,7 +5,7 @@ import React from "react";
 function TextBoxContainer(probs) {
   const { username, context, date, onDelbtnclick, onEditbtnclick } = probs;
   return (
-    <div className="text-box-container">
+    <div className="text-box-container text-box-container">
       <span
         id={
           window.location.pathname === "/"
@@ -15,7 +15,7 @@ function TextBoxContainer(probs) {
             : ""
         }
       >
-        From : {username}
+        <div className="usertext"> From : {username}</div>
       </span>
       <input
         id={

@@ -50,7 +50,7 @@ function UserPanelPage() {
   };
 
   const getUserposts = () => {
-    Axios.get("http://localhost:3001/user_posts").then((response) => {
+    Axios.get("https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/user_posts").then((response) => {
       setUserPostData(response.data);
     });
   };
@@ -58,7 +58,7 @@ function UserPanelPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const response = Axios.post(
-      "http://localhost:3001/createpost",
+      "https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/createpost",
       JSON.stringify({
         postfromuser: username,
         userpostcontext: postcontext,
@@ -86,7 +86,7 @@ function UserPanelPage() {
 
   const onDelhandleSubmit = (postid) => {
     Axios.post(
-      "http://localhost:3001/user_post_delete",
+      "https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/user_post_delete",
       JSON.stringify({
         userpostid: postid,
       }),
@@ -107,7 +107,7 @@ function UserPanelPage() {
   const onEdithandleSubmit = (e) => {
     e.preventDefault();
     Axios.post(
-      "http://localhost:3001/user_post_edit",
+      "https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/user_post_edit",
       JSON.stringify({
         postcontext: preveditdata,
         postid: userpostid,

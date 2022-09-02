@@ -2,7 +2,7 @@ import Axios from "axios";
 
 const getUserauth = () => {
   const response = Axios.post(
-    "http://localhost:3001/auth",
+    "https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/auth",
     JSON.stringify({}),
     {
       headers: {

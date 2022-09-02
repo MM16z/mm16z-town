@@ -44,7 +44,7 @@ function RegisterPage() {
       email: email,
       password: password,
     };
-    fetch("http://localhost:3001/register", {
+    fetch("https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

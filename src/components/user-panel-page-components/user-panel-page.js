@@ -50,7 +50,7 @@ function UserPanelPage() {
   };
 
   const getUserposts = () => {
-    Axios.get("https://mm16-town.vercel.app/user_posts").then((response) => {
+    Axios.get("https://mm16z-town-crud.herokuapp.com/user_posts").then((response) => {
       setUserPostData(response.data);
     });
   };
@@ -58,7 +58,7 @@ function UserPanelPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const response = Axios.post(
-      "https://mm16-town.vercel.app/createpost",
+      "https://mm16z-town-crud.herokuapp.com/createpost",
       JSON.stringify({
         postfromuser: username,
         userpostcontext: postcontext,
@@ -86,7 +86,7 @@ function UserPanelPage() {
 
   const onDelhandleSubmit = (postid) => {
     Axios.post(
-      "https://mm16-town.vercel.app/user_post_delete",
+      "https://mm16z-town-crud.herokuapp.com/user_post_delete",
       JSON.stringify({
         userpostid: postid,
       }),
@@ -107,7 +107,7 @@ function UserPanelPage() {
   const onEdithandleSubmit = (e) => {
     e.preventDefault();
     Axios.post(
-      "https://mm16-town.vercel.app/user_post_edit",
+      "https://mm16z-town-crud.herokuapp.com/user_post_edit",
       JSON.stringify({
         postcontext: preveditdata,
         postid: userpostid,

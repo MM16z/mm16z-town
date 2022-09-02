@@ -44,7 +44,7 @@ function RegisterPage() {
       email: email,
       password: password,
     };
-    fetch("https://mm16-town.vercel.app/register", {
+    fetch("https://mm16z-town-crud.herokuapp.com/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

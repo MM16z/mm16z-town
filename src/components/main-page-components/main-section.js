@@ -15,9 +15,7 @@ function Mainsection() {
   const navigate = useNavigate();
 
   const getUserposts = () => {
-    Axios.get(
-      "https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/user_posts"
-    ).then((response) => {
+    Axios.get("https://mm16-town.vercel.app/user_posts").then((response) => {
       setUserData(response.data);
     });
   };

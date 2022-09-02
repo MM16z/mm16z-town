@@ -67,7 +67,7 @@ function LoginPage() {
       email: email,
       password: password,
     };
-    fetch("https://mm16-town-nodejsexpress-bn2ae2zur-mm16z.vercel.app/login", {
+    fetch("https://mm16-town.vercel.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -24,12 +24,13 @@ function App() {
       );
     } else {
       setUsername("Anomymous");
+      window.location = "/";
+      return;
     }
   };
 
   useEffect(() => {
     routeAuth();
-    window.location = "/";
   }, []);
   return (
     <div className="app-container">

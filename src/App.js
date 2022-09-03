@@ -24,8 +24,6 @@ function App() {
       );
     } else {
       setUsername("Anomymous");
-      window.location = "/";
-      return;
     }
   };
 

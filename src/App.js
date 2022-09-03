@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     routeAuth();
-    console.log(localStorage.getItem("token"));
+    window.location = "/";
   }, []);
   return (
     <div className="app-container">
